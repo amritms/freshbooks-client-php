@@ -1,0 +1,54 @@
+{
+    "name": "amritms/freshbooks-client-php",
+    "description": "A wrapper to use the Freshbook's api in your laravel SaaS application. This repo can manage freshbook account on behalf of third party users.",
+    "keywords": [
+        "amritms",
+        "freshbooks-client-php"
+    ],
+    "homepage": "https://github.com/amritms/freshbooks-client-php",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Amrit Man Shrestha",
+            "email": "amritms@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amritms\\FreshbooksClientPhp\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Amritms\\FreshbooksClientPhp\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amritms\\FreshbooksClientPhp\\FreshbooksClientPhpServiceProvider"
+            ],
+            "aliases": {
+                "FreshbooksClientPhp": "Amritms\\FreshbooksClientPhp\\FreshbooksClientPhpFacade"
+            }
+        }
+    }
+}
